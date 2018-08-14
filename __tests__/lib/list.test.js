@@ -1,3 +1,3 @@
 'use strict';
 
-const List = ('../../lib/list');
+const List = require('../../lib/list');
