@@ -78,4 +78,11 @@ describe('List', () => {
       var result = list.pop();
       expect(result).toBe('cat');
     });
+    it('does nothing if the lists length is zero',()=>{
+      var list = new List();
+      
+      expect(list.pop()).toBe(undefined);
+      expect(list).toEqual({'length':0});
+    });
+  });
 });
