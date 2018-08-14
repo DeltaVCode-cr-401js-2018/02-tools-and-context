@@ -24,3 +24,12 @@ describe('List', () => {
       expect(list[1]).toBe('test2');
     });
   });
+
+  describe('map',()=>{
+    it('returns a new list',()=>{
+      var list = new List();
+      var res = list.map(element => element);
+      
+      expect(res.length).toBe(list.length);
+      expect(res).not.toBe(list);
+    });
