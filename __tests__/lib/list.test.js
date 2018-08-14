@@ -10,3 +10,17 @@ describe('List', () => {
       expect(list.length).toBe(0);
     });
   });
+  describe('push',()=>{
+    it('adds a new thing to the end of the list',()=>{
+      var list = new List();
+      
+      list.push('test');
+      expect(list.length).toBe(1);
+      expect(list[0]).toBe('test');
+
+      list.push('test2');
+      expect(list.length).toBe(2);
+      expect(list[0]).toBe('test');
+      expect(list[1]).toBe('test2');
+    });
+  });
