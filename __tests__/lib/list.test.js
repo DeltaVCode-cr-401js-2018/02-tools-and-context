@@ -33,3 +33,31 @@ describe('List', () => {
       expect(res.length).toBe(list.length);
       expect(res).not.toBe(list);
     });
+
+    it('returns new list with result of callback for each element', ()=>{
+      var list = new List();
+      list.push(2);
+      list.push(3);
+
+      var result = list.map(number => number*number);
+      
+      expect(result.length).toBe(list.length);
+      expect(result[0]).toBe(4);
+      expect(result[1]).toBe(9);
+    });
+
+    it('calls callback with element and index',()=>{
+      var list = new List();
+      list.push('John');
+      list.push('Nathan');
+      list.push('Craig');
+      list.push('Ethan');
+      list.push('Dylan');
+
+      var result = list.map((element,index)=>`${index},${element}`);
+
+      expect(result.length).toBe(list.length);
+      expect(result[1]).toBe('1,Nathan');
+    });
+  });
+});
