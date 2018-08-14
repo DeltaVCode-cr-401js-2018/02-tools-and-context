@@ -60,4 +60,29 @@ describe('List', () => {
       expect(result[1]).toBe('1,Nathan');
     });
   });
+
+  describe('pop',()=>{
+    it('removes last thing in the list',()=>{
+      var list = new List();
+      list.push(1);
+      list.push(2);
+      
+      list.pop();
+      expect(list.length).toBe(1);
+      expect(list).toEqual({'0':1,'length':1});
+    });
+    it('returns the removed item',()=>{
+      var list = new List();
+      list.push('cat');
+
+      var result = list.pop();
+      expect(result).toBe('cat');
+    });
+    it('does nothing if the lists length is zero',()=>{
+      var list = new List();
+      
+      expect(list.pop()).toBe(undefined);
+      expect(list).toEqual({'length':0});
+    });
+  });
 });
