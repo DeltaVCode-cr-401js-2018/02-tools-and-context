@@ -71,4 +71,11 @@ describe('List', () => {
       expect(list.length).toBe(1);
       expect(list).toEqual({'0':1,'length':1});
     });
+    it('returns the removed item',()=>{
+      var list = new List();
+      list.push('cat');
+
+      var result = list.pop();
+      expect(result).toBe('cat');
+    });
 });
