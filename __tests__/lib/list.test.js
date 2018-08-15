@@ -18,7 +18,7 @@ describe('List', () => {
       list.push('monkey');
       list.push('elephant');
 
-      list.forEach(element => element.length)
+      list.forEach(element => element.length);
 
       expect(list).toEqual({'0':3,'1':6,'2':8,'length':3});
     });
