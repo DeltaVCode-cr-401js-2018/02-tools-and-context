@@ -126,18 +126,6 @@ describe('List', () => {
           expect(result).not.toBe(list);
         });
     
-        it('filters out elements that do not pass a given condition',()=>{
-          var list = new List();
-          list.push('cat');
-          list.push('dog');
-          list.push('bear');
-          list.push('tiger');
-    
-          var result = list.filter(element => element.length===5);
-    
-          expect(result.length).not.toEqual(list.length);
-          expect(result).toEqual({'0':'cat','1':'dog','length':2});
-        });
       describe('reduce', ()=>{
         it('takes any number of elements and reduces them to one value', ()=>{
           var list = new List();
