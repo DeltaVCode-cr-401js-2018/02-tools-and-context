@@ -100,6 +100,34 @@ describe('List', () => {
     });
   });
 
+  describe('slice',()=>{
+    it('returns an array out of elements remove',()=>{
+      var list = new List();
+      list.push(1);
+      list.push(2);
+      list.push(3);
+      list.push(4);
+
+      var result = list.slice(3);
+      var result2 = list.slice(1);
+
+      expect(result).toEqual({'0':4,'length':1});
+      expect(result2).toEqual({'0':2,'1':3,'2':4,'length':3});
+    });
+
+    it('uses the second argument as an endpoint',()=>{
+      var list = new List();
+      list.push(1);
+      list.push(2);
+      list.push(3);
+      list.push(4);
+
+      var result = list.slice(1,2);
+
+      expect(result).toEqual({'0':2,'1':3,'length':2});
+    });
+  });
+
   describe('fitler',()=>{
     it('returns a new array',()=>{
       var list = new List();
