@@ -10,6 +10,20 @@ describe('List', () => {
       expect(list.length).toBe(0);
     });
   });
+
+  describe('forEach',()=>{
+    it('applies the callback to each of the elements in the array',()=>{
+      var list = new List();
+      list.push('cat');
+      list.push('monkey');
+      list.push('elephant');
+
+      list.forEach(element => element.length)
+
+      expect(list).toEqual({'0':3,'1':6,'2':8,'length':3});
+    });
+  });
+
   describe('push',()=>{
     it('adds a new thing to the end of the list',()=>{
       var list = new List();
