@@ -108,5 +108,18 @@ describe('List', () => {
       expect(result.length).toBe(list.length);
       expect(result).not.toBe(list);
     });
+
+    it('filters out elements that don\'t pass a given conditional',()=>{
+      var list = new List();
+      list.push('apple');
+      list.push('pear');
+      list.push('grape');
+      list.push('banana');
+
+      var result = list.filter(element => element.length===5);
+
+      expect(result.length).not.toBe(list.length);
+      expect(result).toEqual({'0':'apple','1':'grape','length':2});
+    });
   });
 });
