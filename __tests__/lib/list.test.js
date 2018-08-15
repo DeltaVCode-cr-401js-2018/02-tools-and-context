@@ -18,7 +18,7 @@ describe('List', () => {
       list.push('monkey');
       list.push('elephant');
 
-      list.forEach(element => element.length)
+      list.forEach(element => element.length);
 
       expect(list).toEqual({'0':3,'1':6,'2':8,'length':3});
     });
@@ -97,6 +97,29 @@ describe('List', () => {
       
       expect(list.pop()).toBe(undefined);
       expect(list).toEqual({'length':0});
+    });
+  });
+
+  describe('fitler',()=>{
+    it('returns a new array',()=>{
+      var list = new List();
+      var result = list.filter(element => element);
+
+      expect(result.length).toBe(list.length);
+      expect(result).not.toBe(list);
+    });
+
+    it('filters out elements that don\'t pass a given conditional',()=>{
+      var list = new List();
+      list.push('apple');
+      list.push('pear');
+      list.push('grape');
+      list.push('banana');
+
+      var result = list.filter(element => element.length===5);
+
+      expect(result.length).not.toBe(list.length);
+      expect(result).toEqual({'0':'apple','1':'grape','length':2});
     });
   });
 });
