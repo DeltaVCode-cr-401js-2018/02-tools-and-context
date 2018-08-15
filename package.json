@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JohnMV13/02-tools-and-context#readme",
   "dependencies": {
     "eslint": "^5.3.0",
-    "jest": "^23.5.0"
+    "jest": "^23.5.0",
+    "lint": "^1.1.2"
   }
 }
