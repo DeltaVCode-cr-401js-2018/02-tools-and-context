@@ -99,4 +99,14 @@ describe('List', () => {
       expect(list).toEqual({'length':0});
     });
   });
+
+  describe('fitler',()=>{
+    it('returns a new array',()=>{
+      var list = new List();
+      var result = list.filter(element => element);
+
+      expect(result.length).toBe(list.length);
+      expect(result).not.toBe(list);
+    });
+  });
 });
