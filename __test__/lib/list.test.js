@@ -125,18 +125,17 @@ describe('List', () => {
         expect(result.length).toBe(list.length);
         expect(result).not.toBe(list);
       });
-  
-    describe('reduce', ()=>{
-      it('takes any number of elements and reduces them to one value', ()=>{
-        var list = new List();
-        list.push(1);
-        list.push(2);
-        list.push(3);
-        list.push(2);
+      describe('reduce', ()=>{
+        it('takes any number of elements and reduces them to one value', ()=>{
+          var list = new List();
+          list.push(1);
+          list.push(2);
+          list.push(3);
+          list.push(2);
 
-        var res = list.reduce((acc, val)=> acc + val);
-        expect(res).toBe(8);
-      });
+          var res = list.reduce((acc, val)=> acc + val);
+          expect(res).toBe(8);
+        });
       });
     });
   });
