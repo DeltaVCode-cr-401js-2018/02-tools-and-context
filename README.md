@@ -26,7 +26,7 @@ Configure the root of your repository with the following files and directories. 
 #### List Module
   * implement a List constructor using a constructor, factory, or class
   * implement the length property
-  * implement the `push()` and `pop()`, `slice()` methods on the List prototype
+  * implement the /`push()` and /`pop()`, /`slice()` methods on the List prototype
   * implement `forEach()`, `map()`, `filter()`, and `reduce()` as pure methods on the List prototype
   * Do not use any built-in array methods to do this
   
