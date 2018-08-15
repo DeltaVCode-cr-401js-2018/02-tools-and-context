@@ -71,12 +71,12 @@ describe('List', () => {
       expect(list.length).toBe(1);
       list.pop();
       expect(list.length).toBe(0);
-    })
+    });
     it('returns 0 if there are no items in the list', () => {
       var list = new List();
       list.pop();
-      expect(list.length).toBe(0)
-    })
+      expect(list.length).toBe(0);
+    });
   });
   describe('splice', () => {
     it('takes a number of items from a the list and returns a list with those items in it', () => {
@@ -88,8 +88,8 @@ describe('List', () => {
       list.push('test5');
       list.push('test6');
       
-      expect(list.slice(1, 4).length).toBe(3)
-    })
+      expect(list.slice(1, 4).length).toBe(3);
+    });
     it('returns null if NaN', () => {
       var list = new List();
       list.push('test');
@@ -101,42 +101,42 @@ describe('List', () => {
 
       expect(list.slice('test', 'test4')).toBe(null);
     });
-      describe('forEach', ()=>{
-        it('does something for each element in a list', ()=>{
-          var list = new List();
-          list.push(1);
-          list.push(2);
-          list.push(3);
-          list.push(2);
-  
-          var res = 0;
-  
-          list.forEach(function(x){
-            res+=x;
-          });
-          expect(res).toBe(8);
+    describe('forEach', ()=>{
+      it('does something for each element in a list', ()=>{
+        var list = new List();
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(2);
+
+        var res = 0;
+
+        list.forEach(function(x){
+          res+=x;
         });
+        expect(res).toBe(8);
       });
-      describe('fitler',()=>{
-        it('returns a new array',()=>{
-          var list = new List();
-          var result = list.filter(element => element);
-    
-          expect(result.length).toBe(list.length);
-          expect(result).not.toBe(list);
-        });
-    
-      describe('reduce', ()=>{
-        it('takes any number of elements and reduces them to one value', ()=>{
-          var list = new List();
-          list.push(1);
-          list.push(2);
-          list.push(3);
-          list.push(2);
+    });
+    describe('fitler',()=>{
+      it('returns a new array',()=>{
+        var list = new List();
+        var result = list.filter(element => element);
   
-          var res = list.reduce((acc, val)=> acc + val);
-          expect(res).toBe(8);
-        });
+        expect(result.length).toBe(list.length);
+        expect(result).not.toBe(list);
+      });
+  
+    describe('reduce', ()=>{
+      it('takes any number of elements and reduces them to one value', ()=>{
+        var list = new List();
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(2);
+
+        var res = list.reduce((acc, val)=> acc + val);
+        expect(res).toBe(8);
+      });
       });
     });
   });
