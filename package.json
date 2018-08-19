@@ -1,0 +1,29 @@
+{
+  "name": "02-tools-and-context",
+  "version": "1.0.0",
+  "description": "![cf](https://i.imgur.com/7v5ASc8.png) 02: Tools and Context\r ======",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test:watch": "jest --watch",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tektechnologies/02-tools-and-context.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tektechnologies/02-tools-and-context/issues"
+  },
+  "homepage": "https://github.com/tektechnologies/02-tools-and-context#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "jest": "^23.5.0"
+  },
+  "dependencies": {}
+}
